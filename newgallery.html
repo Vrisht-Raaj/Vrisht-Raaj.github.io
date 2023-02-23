@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DSVGC</title>
+        <link rel="stylesheet" href="newgallery.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="icon" href="https://thumbs.dreamstime.com/b/gaming-icon-background-graphic-web-design-simple-vector-sign-internet-concept-symbol-website-button-mobile-app-144428887.jpg">
+        <script>
+            function allowDrop(ev){
+                ev.preventDefault();
+            }
+
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+            }
+        </script>
+</head>
+<body>
+    <!--
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <img id="drag1" src="/gallery/img1.jpg" draggable="true" ondragstart="drag(event)" width="600" height="auto">
+
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>-->
+
+<h2>Responsive Image Gallery</h2>
+
+<h4>Resize the browser window to see the effect.</h4>
+
+<div class="responsive">
+  <div class="gallery">
+    <div class="flip-box" >
+        <div class="flip-box-inner">
+            <div class="flip-box-front">
+                <a target="_blank" href="/gallery/img1.jpg">
+                    <img src="/gallery/img1.jpg" alt="Cinque Terre" width="600" height="auto">
+                </a>
+            </div>
+            <div class="flip-box-back">
+                <h2>Date Taken : 29/02/2023</h2>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="responsive">
+    <div class="gallery">
+      <div class="flip-box">
+          <div class="flip-box-inner">
+              <div class="flip-box-front">
+                  <a target="_blank" href="/gallery/img2.jpeg">
+                      <img src="/gallery/img2.jpeg" alt="Cinque Terre" width="600" height="auto">
+                  </a>
+              </div>
+              <div class="flip-box-back">
+                  <h2>Date Taken : 29/02/2023</h2>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+
+</body>
+</html>
+
+
