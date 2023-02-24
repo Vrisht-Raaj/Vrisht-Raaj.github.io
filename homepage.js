@@ -23,3 +23,21 @@ function scrollFunction() {
     document.getElementById("topnav").style.top = "-50px";
   }
 }
+
+const toggle = document.getElementById('toggleDark');
+const body = document.querySelector('body');
+
+toggle.addEventListener('click', function(){
+    this.classList.toggle('bi-moon');
+    localStorage.setItem('dark', this.checked);
+    if(this.classList.toggle('bi-brightness-high-fill')){
+        body.style.backgroundImage = "url('background.jpg')";
+        body.style.color = 'black';
+        body.style.transition = '2s';
+    }else{
+        body.style.background = "url('/gallery/lmback.jpg')";
+        body.style.backgroundRepeat = "fixed";
+        body.style.color = 'blue';
+        body.style.transition = '2s';
+    }
+});
