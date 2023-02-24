@@ -1,0 +1,94 @@
+#div1, #div2{
+    float: left;
+    width: 600px;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.flip-box {
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+.flip-box-back {
+    background-color: transparent;
+    color: black;
+    transform: rotateY(180deg);
+}
+
+.flip-box-front {
+    background-color: #bbb;
+    color: black;
+}
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
