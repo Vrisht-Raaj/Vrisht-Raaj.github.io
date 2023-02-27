@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+        <link rel="stylesheet" href="register.css" rel="stylesheet">
+        <link rel="icon" href="https://thumbs.dreamstime.com/b/gaming-icon-background-graphic-web-design-simple-vector-sign-internet-concept-symbol-website-button-mobile-app-144428887.jpg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!--NAVIGATION BAR-->
+        <div class="back-img">
+          <div class="container">
+              <div class="topnav">
+                  <a rel="icon" href="https://thumbs.dreamstime.com/b/gaming-icon-background-graphic-web-design-simple-vector-sign-internet-concept-symbol-website-button-mobile-app-144428887.jpg"></a>
+                  <a href="/homepage.html">Homepage</a>
+                  <a href="post.html">Posts</a>
+                  <a href="gallery.html">Gallery</a>
+                  <a href="sitemap.html">Sitemap</a>   
+                  <a href="aboutus.html">About Us</a>
+                  <a href="contactus.html">Contact Us</a>
+                  <a href="games.html">Games</a>
+                  <div class="dropdown">
+                      <button class="dropbtn" class="split">Join Us
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                      <div class="dropdown-content">
+                        <a href="register.html">Register</a>
+                        <a href="homepage.html">Log Out</a>
+                      </div>
+                    </div>
+              </div>
+          </div>
+      </div>
+
+
+          <!-- BREADCRUMBS-->
+          <ul class="breadcrumb">
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="#">Register</a></li>
+          </ul> 
+
+
+          <!-- Body of Form starts -->
+           <div class="container1">
+            <form id="myForm" autocomplete="on">
+              
+              <!--First name-->
+              <div class="box">
+                <label for="firstName" class="fl fontLabel"> First Name: </label>
+                <div class="new iconBox">
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+                <div class="fr">
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name"
+                    class="textBox" autofocus="on" required>
+                </div>
+                <div class="clr"></div>
+              </div>
+
+
+
+              <!--Second name-->
+              <div class="box">
+                <label for="secondName" class="fl fontLabel"> Last name: </label>
+                <div class="fl iconBox"><i class="fa fa-user" aria-hidden="true"></i></div>
+                <div class="fr">
+                    <input type="text" id="secondName" required name="secondName"
+                    placeholder="Last Name" class="textBox">
+                </div>
+                <div class="clr"></div>
+              </div>
+
+
+              <!---Email ID---->
+              <div class="box">
+                <label for="email" class="fl fontLabel"> Email: </label>
+                <div class="fl iconBox"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                <div class="fr">
+                    <input type="email" id="email" required name="email" placeholder="Email" class="textBox">
+                </div>
+                <div class="clr"></div>
+              </div>
+
+
+
+              <!---Phone No.------>
+              <div class="box">
+                <label for="phone" class="fl fontLabel"> Phone Number: </label>
+                <div class="fl iconBox"><i class="fa fa-phone-square" aria-hidden="true"></i></div>
+                <div class="fr">
+                    <input type="text" id="phoneNo" required name="phoneNo" maxlength="10" placeholder="Phone No." class="textBox">
+                </div>
+                <div class="clr"></div>
+              </div>
+
+
+              <!---Date of birth----->
+              <div class="birthday">
+                <label for="birthday"><font color="white">Date of birth:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></label>
+                  <input type="date" id="birth" name="birth" required> 
+              </div>
+
+              <!---Gender----->
+              <div class="box radio">
+                <label for="gender" class="fl fontLabel"> Gender: </label>
+                  <input type="radio" name="Gender" id="Gender" value="Male" required> Male &nbsp; &nbsp; &nbsp; &nbsp;
+                  <input type="radio" name="Gender" id="Gender" value="Female" required> Female
+              </div>
+
+            <!---Comment-->
+            <p><font color="white">Experience:</font></p>
+              <textarea
+                id="comments"
+                name="comment"
+                placeholder="Describe your gaming experience"
+              ></textarea>
+
+
+              <!--Terms and Conditions------>
+              <div class="box terms">
+                  <input type="checkbox" name="Terms" id="terms" required> &nbsp; I accept the terms and conditions<br>
+                  <input type="checkbox" name="Terms" id="terms" required> &nbsp; I will be an exemplary member
+              </div>
+
+
+              <!---Submit Button------>
+              <div class="box" style="background: #2d3e3f">
+                  <input type="Submit" name="Submit" class="submit" value="SUBMIT" onclick="showConfirm(event)" >
+              </div>
+
+            </form>
+            <script src="register.js"></script>
+        </div>
+
+         
+    </body>
+</html>
